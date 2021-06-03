@@ -15,3 +15,6 @@ accept_button.click()
 input_field = driver.find_element_by_name('q')
 input_field.send_keys(sys.argv[1])
 input_field.send_keys(Keys.RETURN)
+
+first_result = driver.find_elements_by_class_name('g')[0]
+first_result.click()
