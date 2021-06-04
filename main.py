@@ -15,21 +15,33 @@ with open('login.json') as json_file:
 driver = webdriver.Chrome()
 
 #server switch
-if(sys.argv[2] == 1):
-    driver.get('https://neptun11.uni-pannon.hu/hallgato/login.aspx')
-elif(sys.argv[2] == 2):
-    driver.get('https://neptun12.uni-pannon.hu/hallgato/login.aspx')
-elif(sys.argv[2] == 3):
-    driver.get('https://neptun13.uni-pannon.hu/hallgato/login.aspx')
+try:
+    if(sys.argv[2] == "1"):
+        print("///NEPTUN OPENED ON SERVER 1///")
+        driver.get('https://neptun11.uni-pannon.hu/hallgato/login.aspx')
+    elif(sys.argv[2] == "2"):
+        print("///NEPTUN OPENED ON SERVER 2///")
+        driver.get('https://neptun12.uni-pannon.hu/hallgato/login.aspx')
+    elif(sys.argv[2] == "3"):
+        print("///NEPTUN OPENED ON SERVER 3///")
+        driver.get('https://neptun13.uni-pannon.hu/hallgato/login.aspx')
+    else:
+        print("///FATAL: NOT RECOGNIZED SERVER GIVEN AS PARAMETER///")
+except IndexError:
+    print("///FATAL: SERVER PARAMETER EMPTY///")
+
+if( not login_data['neptun_code'] or not login_data['neptun_code']):
+    print("///FATAL: NEPTUN CODE OR PASSWORD CANNOT BE EMPTY///")
+    exit(0)
 
 #login page elements
-neptun_code = driver.find_element_by_name('user')
-password = driver.find_element_by_name('pwd')
+login_code = driver.find_element_by_name('user')
+login_pwd = driver.find_element_by_name('pwd')
 login_button = driver.find_element_by_name('btnSubmit')
 
 #login credentials from json
-neptun_code.send_keys(login_data['neptun_code'])
-password.send_keys(login_data['password'])
+login_code.send_keys(login_data['neptun_code'])
+login_pwd.send_keys(login_data['password'])
 
 login_button.click()
 
@@ -40,7 +52,7 @@ try:
     back_button = driver.find_element_by_name('upSystemParams$upmodalSystemParams$upFootermodalSystemParams$footerbtn_modalSystemParams_Vissza')
     back_button.click()
 except TimeoutException:
-    print("///FATAL EXCEPTION: PAGE LOADING TIMEOUT///")
+    print("///FATAL: PAGE LOADING TIMEOUT///")
 
 if(sys.argv[1] == 'órarend'):
     studies_button = driver.find_element_by_id('mb1_Tanulmanyok')
