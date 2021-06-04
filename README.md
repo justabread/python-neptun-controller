@@ -1,5 +1,5 @@
 # python-neptun-controller
-Python script to control websites without a user.
+Python script to speed up usuage of the NEPTUN system
 
 ///USUAGE
 * (Step 0: Make sure you have python installed on your system.)
