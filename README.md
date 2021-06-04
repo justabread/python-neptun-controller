@@ -13,7 +13,7 @@ Python script to control websites without a user.
   * eckekönyv
   * tárgyfelvétel
 
-*  SERVER NUMBER
+* SERVER NUMBER
   *  1
   *  2
   *  3
