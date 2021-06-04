@@ -9,11 +9,11 @@ Python script to control websites without a user.
 
 ///RECOGNIZED COMMANDS
 * NEPTUN PAGE NAME
-*   órarend
-*   leckekönyv
-*   tárgyfelvétel
+  * órarend
+  * eckekönyv
+  * tárgyfelvétel
 
 *  SERVER NUMBER
-*     1
-*     2
-*     3
+  *  1
+  *  2
+  *  3
