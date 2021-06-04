@@ -11,11 +11,11 @@ Python script to speed up usuage of the NEPTUN system
 
 ///RECOGNIZED COMMANDS
 * NEPTUN PAGE NAME
-  * órarend
-  * leckekönyv
-  * tárgyfelvétel
+  * "órarend"
+  * "leckekönyv"
+  * "tárgyfelvétel"
 
 * SERVER NUMBER
-  *  1
-  *  2
-  *  3
+  *  "1"
+  *  "2"
+  *  "3"
