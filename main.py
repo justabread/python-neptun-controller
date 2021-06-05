@@ -1,3 +1,5 @@
+#TODO implement more browsers//add more pages
+
 import sys
 import json
 from selenium import webdriver
