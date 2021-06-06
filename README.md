@@ -14,6 +14,7 @@ Python script to speed up usuage of the NEPTUN system
   * "órarend"
   * "leckekönyv"
   * "tárgyfelvétel"
+  * "vizsgajelentkezés"
 
 * SERVER NUMBER
   *  "1"
