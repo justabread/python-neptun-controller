@@ -72,3 +72,11 @@ elif(sys.argv[1] == 'tárgyfelvétel'):
 
     timetable_button = driver.find_element_by_id('mb1_Targyak_Targyfelvetel')
     timetable_button.click()
+elif(sys.argv[1] == 'vizsgajelentkezés'):
+    timetable_button = driver.find_element_by_id('mb1_Vizsgak')
+    timetable_button.click()
+
+    timetable_button = driver.find_element_by_id('mb1_Vizsgak_Vizsgajelentkezes')
+    timetable_button.click()
+else:
+    print("///FATAL: PAGE NOT RECONGIZED///")
