@@ -45,14 +45,14 @@ login_pwd.send_keys(login_data['password'])
 
 login_button.click()
 
-timeout = 10
+timeout = 2
 try:
     element_present = EC.presence_of_element_located((By.NAME, 'upSystemParams$upmodalSystemParams$upFootermodalSystemParams$footerbtn_modalSystemParams_Vissza'))
     WebDriverWait(driver, timeout).until(element_present)
     back_button = driver.find_element_by_name('upSystemParams$upmodalSystemParams$upFootermodalSystemParams$footerbtn_modalSystemParams_Vissza')
     back_button.click()
 except TimeoutException:
-    print("///FATAL: PAGE LOADING TIMEOUT///")
+    print("///QUERY POPUP NOT PRESENT///")
 
 if(sys.argv[1] == 'órarend'):
     studies_button = driver.find_element_by_id('mb1_Tanulmanyok')
